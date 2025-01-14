@@ -1,12 +1,15 @@
 
+require("dotenv").config();
+const mongoDBPass = process.env.PASSWORD
 const MongoClient = require('mongodb').MongoClient;
-
-const url         = 'mongodb://localhost:27017';
+const url    = `mongodb+srv://ylem:${mongoDBPass}@mycluster.8hs7p.mongodb.net/?retryWrites=true&w=majority&appName=myCluster`
+//const url    = 'mongodb://localhost:27017';
 var db;
+
 // connect to mongo
 const mongoConnect = function(callback) {
     MongoClient.connect(
-        'mongodb://localhost:27017',
+        url,
         { useUnifiedTopology: true }
         )
         .then(client => {
