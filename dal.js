@@ -15,11 +15,11 @@ const mongoConnect = function(callback) {
         .then(client => {
             db = client.db('myproject');
             callback();
-        })
-        .catch(error => {
+        });
+       /* .catch(error => {
             console.log(error);
             throw new Error('DB connection failed...');
-        });
+        });8?
 }
 
 
