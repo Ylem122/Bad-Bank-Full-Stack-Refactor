@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, '../my-app/build')));
 
 // used to serve static files from public directory
 app.use(express.json())
-app.use(express.static('public'));
+//app.use(express.static('public'));
 app.use(cors());
 
 // create user account
