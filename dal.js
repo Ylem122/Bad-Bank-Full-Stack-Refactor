@@ -19,7 +19,7 @@ const mongoConnect = function(callback) {
        /* .catch(error => {
             console.log(error);
             throw new Error('DB connection failed...');
-        });8?
+        });*/
 }
 
 
