@@ -5,8 +5,9 @@ var app     = express();
 var cors    = require('cors');
 var dal     = require('./dal.js');
 const e = require('express');
-app.use(express.static(path.join(__dirname, '../my-app/build')));
-
+//app.use(express.static(path.join(__dirname, '../my-app/build')));
+app.use(express.static(path.join(__dirname, './build')));
+//app.use('/', express.static('dist'))
 // used to serve static files from public directory
 app.use(express.json())
 //app.use(express.static('public'));
